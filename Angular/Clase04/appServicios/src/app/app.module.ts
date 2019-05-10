@@ -15,7 +15,6 @@ import { LogService } from './log.service';
     BrowserModule
   ],
   providers: [
-    DataService,
     LogService
   ],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ import { LogService } from '../log.service';
 export class CambiarCursoComponent implements OnInit {
   //obj: DataService
 
-  constructor(private obj: DataService, private log: LogService) {
+  constructor(private obj: DataService) {
     //this.obj = obj
   }
 
@@ -19,7 +19,6 @@ export class CambiarCursoComponent implements OnInit {
 
   mostrar() {
     //const obj = new DataService()
-    this.log.escribir("Mostrar curso")
     alert(this.obj.leerNombre())
   }
 
