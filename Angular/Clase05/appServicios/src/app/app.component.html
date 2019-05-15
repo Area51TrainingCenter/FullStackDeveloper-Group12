@@ -1,0 +1,12 @@
+<p>
+  {{nombreCurso}}
+</p>
+<p>
+  <!--   <input type="text" [ngModel]="nombreCurso" (ngModelChange)="nombreCurso=$event"> -->
+  <input type="text" [(ngModel)]="nombreCurso">
+
+</p>
+
+
+<button (click)="obj.cambiarNombre('Angular')">Cambiar nombre</button>
+<app-cambiar-curso></app-cambiar-curso>
