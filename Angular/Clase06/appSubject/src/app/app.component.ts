@@ -38,7 +38,8 @@ export class AppComponent {
   }
 
   enviar() {
-    this.libroService.subject.next({ titulo: "Pantaleón y las visitadoras" })
+    this.libroService.editar({ titulo: "El Perfume" })
+    //this.libroService.subject.next({ titulo: "Pantaleón y las visitadoras" })
     //this.subject.next("Enviando los datos")
   }
 

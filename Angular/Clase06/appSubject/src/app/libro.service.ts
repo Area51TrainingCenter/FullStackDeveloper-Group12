@@ -8,4 +8,9 @@ export class LibroService {
   subject: Subject<{}> = new Subject()
 
   constructor() { }
+
+  editar(novela: {}) {
+    this.subject.next(novela)
+  }
+
 }
