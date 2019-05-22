@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { RouterModule, Route, Routes } from "@angular/router";
-import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component'
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
+import { EdicionComponent } from './edicion/edicion.component'
 
 //const rutas: Route[] = []
 const rutas: Routes = [
   { path: "", component: UsuarioComponent },
   { path: "clientes", component: ClienteComponent },
+  { path: "edicion/:id", component: EdicionComponent },
   //{ path: "**", component: NoEncontradoComponent }
   { path: "**", redirectTo: "" }
 ]
@@ -20,7 +22,8 @@ const rutas: Routes = [
     AppComponent,
     UsuarioComponent,
     ClienteComponent,
-    NoEncontradoComponent
+    NoEncontradoComponent,
+    EdicionComponent
   ],
   imports: [
     BrowserModule,
