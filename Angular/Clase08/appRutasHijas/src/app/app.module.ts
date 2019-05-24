@@ -10,19 +10,21 @@ import { NuevoClienteComponent } from './nuevo-cliente/nuevo-cliente.component';
 import { EdicionClienteComponent } from './edicion-cliente/edicion-cliente.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from "@angular/router"
+import { AutenticadoGuard } from './autenticado.guard';
+import { AutorizacionGuard } from './autorizacion.guard';
 
 const rutas: Routes = [
   { path: "", component: HomeComponent },
   {
-    path: "usuario", component: ListadoUsuariosComponent, children: [
-      { path: "", component: ListadoUsuariosComponent },
+    path: "usuario", component: ListadoUsuariosComponent, canActivateChild: [AutorizacionGuard], children: [
+      //{ path: "", component: ListadoUsuariosComponent },
       { path: "nuevo", component: NuevoUsuarioComponent },
       { path: "edicion/:id", component: EdicionUsuarioComponent }
     ]
   },
   {
-    path: "cliente", children: [
-      { path: "", component: ListadoClientesComponent },
+    path: "cliente", canActivateChild: [AutorizacionGuard], children: [
+      { path: "", component: ListadoClientesComponent, },
       { path: "nuevo", component: NuevoClienteComponent },
       { path: "edicion/:id", component: EdicionClienteComponent }
     ]
@@ -45,7 +47,7 @@ const rutas: Routes = [
     BrowserModule,
     RouterModule.forRoot(rutas)
   ],
-  providers: [],
+  providers: [AutenticadoGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
