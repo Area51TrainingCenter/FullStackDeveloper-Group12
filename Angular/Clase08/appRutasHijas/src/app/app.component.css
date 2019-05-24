@@ -1,0 +1,16 @@
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+  color: green;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+a.activo {
+  color: red
+}
+
+
+

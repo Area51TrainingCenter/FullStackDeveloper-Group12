@@ -1,0 +1,27 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    </li>
+    <li>
+      <a routerLink="/usuario" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">Listado Usuario</a>
+    </li>
+    <li>
+      <a routerLink="/usuario/nuevo" routerLinkActive="activo">Nuevo Usuario</a>
+    </li>
+    <li>
+      <a routerLink="/usuario/edicion/30" routerLinkActive="activo">Edición Usuario</a>
+    </li>
+    <li>
+      <a routerLink="/cliente" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">Listado Cliente</a>
+    </li>
+    <li>
+      <a routerLink="/cliente/nuevo" routerLinkActive="activo">Nuevo Cliente</a>
+    </li>
+    <li>
+      <a routerLink="/cliente/edicion/30" routerLinkActive="activo">Edición Cliente</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
