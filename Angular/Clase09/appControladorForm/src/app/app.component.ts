@@ -1,5 +1,6 @@
 import { AlumnoService } from './alumno.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  @ViewChild("f") formulario: NgForm
+
   constructor(private alumnoService: AlumnoService) { }
+
+  ingresar() {
+    console.log(this.formulario)
+  }
 
   listar() {
     console.log("LISTAR", this.alumnoService.listar("nombre"))

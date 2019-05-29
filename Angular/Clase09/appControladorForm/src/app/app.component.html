@@ -4,3 +4,18 @@
 <button (click)="insertar()">insertar</button>
 <button (click)="modificar()">modificar</button>
 <button (click)="eliminar()">eliminar</button>
+
+<form #f="ngForm">
+  <div>
+    <input type="text" placeholder="correo" ngModel name="correo" required email maxlength="50" min=2001 max="10000">
+  </div>
+  <div>
+    <input type="password" placeholder="contrasena" ngModel name="password" required>
+  </div>
+  <div>
+    <input type="text" placeholder="Nombre completo" ngModel name="nombreCompleto" required>
+  </div>
+  <div>
+    <button (click)="ingresar()">Ingresar</button>
+  </div>
+</form>
