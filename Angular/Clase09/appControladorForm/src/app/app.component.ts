@@ -23,9 +23,13 @@ export class AppComponent {
   }
 
   insertar() {
+<<<<<<< HEAD
     this.alumnoService.insertar({ nombre: "Carmen", apellido: "Lara", colegio: "Guadalupe" })
 
     console.log("INSERTAR", this.alumnoService.listar())
+=======
+    console.log("INSERTAR", this.alumnoService.insertar({ nombre: "Carmen", apellido: "Lara", colegio: "Guadalupe" }))
+>>>>>>> 54a706d247404de868f492246afed99fd187d7af
   }
 
   modificar() {
