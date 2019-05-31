@@ -1,0 +1,24 @@
+<form #f="ngForm">
+  <div>
+    <input type="email" placeholder="Correo" name="correo" ngModel required email #mail="ngModel">
+    <span *ngIf="mail.errors && mail.errors.required && mail.touched">El correo es necesario</span>
+    <span *ngIf="mail.errors && mail.errors.email && mail.touched">El formato no es de un correo</span>
+  </div>
+  <div>
+    <input type="password" placeholder="Contraseña" name="contrasena" ngModel required minlength="6" maxlength="10"
+      #contrasena="ngModel">
+    <span *ngIf="contrasena.errors && contrasena.errors.required && contrasena.touched">La contraseña es
+      necesaria</span>
+    <span *ngIf="contrasena.errors && contrasena.errors.minlength && contrasena.touched">Se requiere mínimo
+      {{contrasena.errors.minlength.requiredLength}} caracteres pero ingreso solo
+      {{contrasena.errors.minlength.actualLength}}</span>
+  </div>
+  <div>
+    <button (click)="login()" [disabled]="!f.valid">Login</button>
+  </div>
+</form>
+
+<button (click)="cargar()">Cargar data</button>
+
+<hr>
+<app-formulario></app-formulario>

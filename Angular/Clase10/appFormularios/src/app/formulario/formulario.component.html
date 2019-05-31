@@ -1,0 +1,25 @@
+<form [formGroup]="grupo" (ngSubmit)="login()">
+  <div>
+    <input type="email" placeholder="Correo" name="correo" formControlName="correo">
+    <span *ngIf="grupo.get('correo').hasError('required') && grupo.get('correo').touched">El correo es necesario</span>
+    <span *ngIf="grupo.get('correo').hasError('email') && grupo.get('correo').touched">El formato no es de correo</span>
+    <span *ngIf="grupo.get('correo').hasError('correoGratuito') && grupo.get('correo').touched">Solo correo
+      empresarial</span>
+  </div>
+  <div>
+    <input type="password" placeholder="Contraseña" name="contrasena" formControlName="contrasena">
+    <span *ngIf="grupo.get('contrasena').hasError('required') && grupo.get('contrasena').touched">La contraseña es
+      necesaria</span>
+    <span *ngIf="grupo.get('contrasena').hasError('minlength') && grupo.get('contrasena').touched">La longitud mínima es
+      6</span>
+  </div>
+  <div>
+    <input type="password" name="confirmar" placeholder="Confirmar contraseña" formControlName="confirmar">
+    <span *ngIf="grupo.get('confirmar').hasError('confirmacionInvalida') && grupo.get('confirmar').touched">Confirmación
+      no coincide</span>
+  </div>
+  <div>
+    <button [disabled]="!grupo.valid">Login</button>
+    <button (click)="cargar()" type="button">Cargar data</button>
+  </div>
+</form>
