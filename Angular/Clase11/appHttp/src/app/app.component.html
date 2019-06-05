@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let alumno of alumnos">
+    {{alumno.nombre}}
+    <button (click)="eliminar(alumno._id)">Eliminar</button>
+  </li>
+</ul>
+<button (click)="insertar()">Insertar</button>
