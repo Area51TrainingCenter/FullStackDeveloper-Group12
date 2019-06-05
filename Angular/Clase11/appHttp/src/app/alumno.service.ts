@@ -2,6 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Alumno } from './alumno';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AlumnoService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get<any>("http://clase.tibajodemanda.com/alumno")
+    return this.http.get<any>(environment.rutaApiRest + "/alumno")
   }
 
   getOne(_id: string): Observable<any> {
