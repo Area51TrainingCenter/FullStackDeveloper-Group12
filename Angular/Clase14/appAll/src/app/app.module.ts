@@ -9,6 +9,8 @@ import { SalirRutaGuard } from './salir-ruta.guard';
 import { Routes, RouterModule } from "@angular/router"
 import { ReactiveFormsModule } from "@angular/forms"
 import { DatosResolve } from './datos.resolve';
+import { ReducidorPipe } from './reducidor.pipe';
+import { FiltrarPipe } from './filtrar.pipe';
 
 const rutas: Routes = [
   {
@@ -23,7 +25,9 @@ const rutas: Routes = [
   declarations: [
     AppComponent,
     FormularioComponent,
-    ListadoComponent
+    ListadoComponent,
+    ReducidorPipe,
+    FiltrarPipe
   ],
   imports: [
     BrowserModule,

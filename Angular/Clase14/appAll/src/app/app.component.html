@@ -1,3 +1,22 @@
+<p>
+  Fecha de hoy {{fecha | date:"dd / MMMM / yyyy" | uppercase}}
+</p>
+<p>
+  {{nombre | async}}
+</p>
+
+<input type="text" (input)="textoABuscar=$event.target.value">
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Descripción</th>
+  </tr>
+  <tr *ngFor="let novela of listado | filtrar:textoABuscar">
+    <td>{{novela.titulo}}</td>
+    <td>{{novela.descripcion | reducidor:90:"leer mas" | uppercase}}</td>
+  </tr>
+</table>
+
 <ul>
   <li>
     <a routerLink="/">Listado</a>
