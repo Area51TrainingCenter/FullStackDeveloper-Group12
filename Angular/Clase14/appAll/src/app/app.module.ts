@@ -8,9 +8,14 @@ import { SalirRutaGuard } from './salir-ruta.guard';
 
 import { Routes, RouterModule } from "@angular/router"
 import { ReactiveFormsModule } from "@angular/forms"
+import { DatosResolve } from './datos.resolve';
 
 const rutas: Routes = [
-  { path: "", component: ListadoComponent },
+  {
+    path: "", component: ListadoComponent, resolve: {
+      lista: DatosResolve
+    }
+  },
   { path: "formulario", component: FormularioComponent, canDeactivate: [SalirRutaGuard] }
 ]
 
@@ -25,7 +30,7 @@ const rutas: Routes = [
     RouterModule.forRoot(rutas),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatosResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
