@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+  <mat-sidenav #menuLateral>
+    <mat-nav-list>
+      <a mat-list-item routerLink="">Home</a>
+      <a mat-list-item routerLink="">Clientes</a>
+      <a mat-list-item routerLink="">Transportistas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="menuLateral.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="">Clientes</a></li>
+        <li><a routerLink="">Transportistas</a></li>
+      </ul>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
