@@ -8,14 +8,19 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="menuLateral.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/clientes">Clientes</a></li>
-        <li><a [routerLink]="['/transportistas']">Transportistas</a></li>
-      </ul>
+      <div fxLayout fxLayoutAlign="space-between" fxLayoutAlign.gt-xs="end" class="contenedor">
+
+        <button mat-icon-button (click)="menuLateral.toggle()" fxHide.gt-xs>
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <ul fxHide.lt-sm>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/clientes">Clientes</a></li>
+          <li><a [routerLink]="['/transportistas']">Transportistas</a></li>
+        </ul>
+
+      </div>
     </mat-toolbar>
 
     <router-outlet></router-outlet>

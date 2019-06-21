@@ -31,3 +31,11 @@ li a:active {
 li a:hover {
   color: white
 }
+
+.contenedor {
+  width: 100%
+}
+
+mat-toolbar {
+  margin-bottom: 30px
+}
