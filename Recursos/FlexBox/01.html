@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.contenedor {
+			display: flex;
+			height: 98vh;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: grey
+		}
+
+		.elem {
+			height: 100px;
+			flex: 1 1 100px
+				/* 			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 100px; */
+		}
+
+		.elem1 {
+			flex-grow: 2;
+			background-color: red
+		}
+
+		.elem2 {
+			background-color: green
+		}
+
+		.elem3 {
+			flex-grow: 4;
+			flex-shrink: 4;
+			background-color: yellow
+		}
+
+		.elem4 {
+			background-color: magenta
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="contenedor">
+		<div class="elem elem1"></div>
+		<div class="elem elem2"></div>
+		<div class="elem elem3"></div>
+		<div class="elem elem4"></div>
+	</div>
+
+
+</body>
+
+</html>
