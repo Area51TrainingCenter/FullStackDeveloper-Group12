@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav #menuLateral>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="menuLateral.close()">Home</a>
+      <a mat-list-item routerLink="/clientes" (click)="menuLateral.close()">Clientes</a>
+      <a mat-list-item routerLink="/transportistas" (click)="menuLateral.close()">Transportistas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="menuLateral.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/clientes">Clientes</a></li>
+        <li><a [routerLink]="['/transportistas']">Transportistas</a></li>
+      </ul>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
