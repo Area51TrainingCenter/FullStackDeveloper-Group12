@@ -1,0 +1,14 @@
+<h1>{{entorno}}</h1>
+
+<img src="assets/bosque.jpg" alt="">
+
+<input type="text" [(ngModel)]="nombre">
+
+<app-item [indice]="indice"></app-item>
+
+<app-home>
+  <p>Cargando... espere por favor</p>
+</app-home>
+
+<app-listado></app-listado>
+<button (click)="cambiarIndice()">Cambiar indice</button>
