@@ -1,0 +1,10 @@
+{
+	"watch": [
+		"server.ts",
+		"routes",
+		"controllers",
+		"handlers"
+	],
+	"ext": "ts",
+	"exec": "ts-node server"
+}
