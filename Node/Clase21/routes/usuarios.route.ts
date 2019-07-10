@@ -9,7 +9,7 @@ const router = express.Router()
 
 router.get("/", cacheo(controller.listar))
 router.post("/", cacheo(controller.insertar))
-router.delete("/:_id", controller.eliminar)
-router.put("/:_id", controller.actualizar)
+router.delete("/:_id", cacheo(controller.eliminar))
+router.put("/:_id", cacheo(controller.actualizar))
 
 export { router }
