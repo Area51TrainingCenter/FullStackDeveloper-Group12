@@ -1,0 +1,1 @@
+mongodb+srv://sergio-hidalgo:todoonada@cluster0-2a0hw.mongodb.net/mibdprueba?retryWrites=true&w=majority
